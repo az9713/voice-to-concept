@@ -1,0 +1,540 @@
+https://www.youtube.com/watch?v=qNtFxkl975c&t=10s
+
+Transcript
+
+
+0:00
+So let's check out our agents
+0:02
+customization screen. So here we have
+0:05
+arbitrage logic high frequency CPU risk
+0:09
+dampener prediction engine quantum
+0:11
+trading market analysis and we get this
+0:14
+drone model and this hash rate greed and
+0:17
+speed. Okay, that was pretty cool. Today
+0:20
+I think we have a pretty cool
+0:21
+application we're going to build. So I'm
+0:23
+just going to walk you through what
+0:24
+we're going to do today. So the basic
+0:26
+idea is that I wanted an application
+0:28
+where I can just speak out and it will
+0:32
+record my voice. So I uh kind of uh
+0:36
+based this on that I want to speak in
+0:38
+some kind of ID I have. It could be
+0:40
+anything but I want to focus on some
+0:41
+IDs. And when the user speaks in this
+0:45
+we're going to record this and we're
+0:46
+going to transcribe it with uh to text
+0:49
+using whisper. And from there when we
+0:51
+have the text we can use Gemini 3 and we
+0:54
+can use Nano Banana uh Pro to generate
+0:57
+five visuals and an overview and a
+1:00
+rating on the ID. So you end up with
+1:02
+kind of like a one pager that you can
+1:04
+see some visuals around your ID. You can
+1:07
+see some text maybe you get a rating or
+1:10
+something like that. I think it turned
+1:11
+out pretty cool and I want to show you
+1:13
+kind of how I did this and how this uh
+1:16
+application works now. So, as always,
+1:18
+let me show you kind of what
+1:19
+documentation I needed to actually build
+1:21
+this in cloud code. And basically, I
+1:23
+just needed again the Gemini 3
+1:25
+documentation and I brought in some
+1:27
+documentation around Nano Banana Pro
+1:30
+that we have used before in this uh
+1:32
+shipment series. So, if we head over to
+1:34
+Claude now, I can just go in here and
+1:39
+basically again I just basically said
+1:42
+what kind of application I want. I went
+1:44
+to plan mode. Uh I don't have any
+1:46
+recording of me actually building the
+1:48
+app uh because I did that yesterday. But
+1:51
+uh I think we want to do some small
+1:53
+changes today and you can kind of see
+1:55
+how I use cloud code and Opus 4.5 to do
+1:58
+that. But now I think we're just going
+2:00
+to run some demos of the application we
+2:02
+built and see if there are anything we
+2:04
+want to change some small tweaks and
+2:06
+stuff. So let's just do an uh I think
+2:09
+we're going to do an MPM uh was it
+2:12
+rundev or was it start? I can't
+2:14
+remember. Let's try start and let's just
+2:16
+head over to localhost 3000 refresh. And
+2:19
+here you can kind of see the app. So you
+2:21
+can see it kind of saved some of the IDs
+2:23
+I did in my testing yesterday. So I
+2:26
+think I want to try to replicate those.
+2:28
+And you can see we have share your ID.
+2:31
+We can do text. We can do record. So
+2:34
+basically when we record this uh this
+2:36
+will be saved and transcribed with
+2:38
+whisper. And you can kind of see this.
+2:40
+So let me just try to record an ID. I'm
+2:43
+just going to come up with something
+2:44
+here live now. So, I'm just going to
+2:47
+press start record.
+2:49
+Okay. So, I have an idea where uh I want
+2:52
+some kind of device that I can put next
+2:56
+to my let's say my flowers or something.
+2:58
+Put it in like a pot where I have the
+3:00
+flowers. This has some kind of metal rod
+3:03
+that is measuring maybe some uh um
+3:07
+humidity or the temperature and it also
+3:10
+take images of the plant. So it always
+3:13
+monitor the plant. It's very easy to
+3:15
+deploy. It runs on like a USBC charger.
+3:18
+So it has a long battery with a small
+3:20
+camera and it could be connected to the
+3:22
+cloud. So uh on my app I can always
+3:25
+follow along with all my plants, see how
+3:28
+they are doing. Maybe it had some AI
+3:30
+analysis or something like that. So yeah
+3:34
+uh that is basically me my ID.
+3:38
+So you can see it now. I just pressed
+3:39
+stop and you can see transcribing audio
+3:42
+with whisper and this is going to take
+3:44
+some time and after we have gotten it in
+3:47
+text I think it should pop up. Yeah.
+3:49
+Okay, that was pretty fast. And now you
+3:51
+can see we are analyzing your ID with
+3:52
+Gemini and then we're going to do the
+3:55
+illustrations or visualizations. And
+3:58
+yeah, let's just see how this turns out.
+4:00
+Okay, so you can see we got this uh
+4:02
+title here. Flora lens smart stick. see
+4:05
+what your plants feel. That is basically
+4:07
+what we turned this into. Okay, so we
+4:10
+got a rating of 8 to 10. And here comes
+4:12
+our images. So this is our hero product.
+4:16
+We can kind of see a camera sticking
+4:18
+into the soil here. And we got a closeup
+4:21
+of the hero product. Okay, that looks
+4:23
+pretty cool.
+4:25
+And yeah, let's see what else we got
+4:27
+here. You can see we have the analysis,
+4:30
+an intelligent camera equipped IoT
+4:32
+monitoring stick.
+4:34
+Uh, and yeah, we get some feedback. We
+4:37
+get some suggested improvements. Add a
+4:39
+module solar planner clip on accessory
+4:43
+to extend battery life near windows.
+4:45
+Okay, that's pretty smart. Include a man
+4:48
+manual privacy shutter for the camera
+4:50
+since this will be placed inside homes.
+4:52
+Also a good idea. Design the head of the
+4:55
+device to be adjustable, tiltable. Okay,
+4:58
+not bad. So, yeah. And we got a a mobile
+5:04
+um UI mockup. Okay, that's pretty cool.
+5:08
+Uh Insitu lifestyle photography. Okay,
+5:11
+so here we can see our flora lens. It's
+5:14
+inside the plant. Pretty cool. And then
+5:18
+we get a technical
+5:20
+um exploited. Okay, so here like a
+5:23
+blueprint. So, we have the visual
+5:26
+sensor, the neural processor, lithium
+5:28
+battery, hydrometer rod, and the USBC.
+5:33
+Pretty cool. Uh, let's see now. Here's
+5:35
+the macro detailed shot of the Flora
+5:38
+lens. Okay, so you kind of get the point
+5:40
+here. So, I went from just reading in my
+5:43
+ID to ending up with something like
+5:46
+this. And maybe I had some kind of
+5:48
+export or something. Export to PDF. I
+5:50
+haven't fixed that. Uh, but I think
+5:52
+that's a pretty cool thing you can do.
+5:54
+Uh, I want to try it on one different
+5:56
+idea. So, let's try to visualize like a
+5:58
+video game. Okay. So, let's try a new
+6:00
+ID. So, we're just going to click on new
+6:01
+ID. We're going to keep those. And I'm
+6:03
+going to record this. So, I'm just going
+6:05
+to think of an idea. I think I have
+6:07
+something. So, let me just record this.
+6:10
+Okay. So, I have a pretty cool idea for
+6:13
+a video game. So the game is going to be
+6:16
+more of like um a realtime
+6:20
+uh game where you uh control and
+6:23
+generate AI agents. So you can train
+6:26
+these agents. So basically they can be
+6:30
+trained or leveled up in like
+6:32
+cryptocurrency.
+6:34
+Some agents you can train up, level up,
+6:36
+pick skills and stuff maybe for poly
+6:39
+market prediction markets. Some could do
+6:42
+stock options. So basically you in the
+6:45
+game you control like a fleet of AI
+6:48
+agents that you send out to maybe earn
+6:51
+money. So it's more like a a real life
+6:54
+game play. Uh you pay a fee of course to
+6:57
+get access to the platform that can
+6:59
+execute and the platform we run of
+7:01
+course will take a cut of the earnings
+7:04
+from the AI agents. uh the players will
+7:08
+need to stake their AI agents
+7:09
+themselves, but we kind of provide the
+7:11
+platform, the interface and stuff like
+7:14
+that. So, uh I kind of want the
+7:17
+interface and the look of the game to be
+7:19
+more like this um more this like
+7:21
+isometric uh hacker look with like a
+7:26
+terminal pixelated styling. Okay, so
+7:28
+let's just try that idea. I'm not 100%
+7:30
+sure if that's going to work, but let's
+7:32
+see what Gemini comes up with here. And
+7:34
+I also think the idea is going to get a
+7:36
+really low rating because that is like a
+7:39
+ludicrous idea, right? But let's just
+7:41
+see what happens. Oh wow, we did get
+7:43
+actually an eight out of 10. Net yield
+7:45
+zero. Okay, that was a bit pretty cool
+7:47
+name. Deploy the code. Harvest their
+7:50
+reality. Okay, so let's see what the
+7:51
+visuals is going to look like. Okay, not
+7:54
+too bad. I kind of like this. So this is
+7:56
+the command deck UI. So we kind of have
+7:59
+like some uh bots here. We have some
+8:01
+code. We have some Bitcoin. Okay, maybe
+8:04
+not the most um
+8:07
+uh useful thing, but let's see what else
+8:09
+turns up here. Let's read some of the
+8:11
+points. Realtime strategy mechanics
+8:14
+applied to financial markets. RPG style
+8:16
+progression for AI agents. Uh real money
+8:20
+economic only staking and yield sharing.
+8:23
+Okay. Integration with data sources like
+8:25
+poly market and stock exchanges. The
+8:28
+feedback is this is a cultural relevant
+8:31
+high potential concept that merges
+8:33
+addictive loops of RPG management games
+8:36
+with the thrill of crypto speculation.
+8:39
+Okay, I think this is a cool idea. So
+8:41
+improvements are implement a sandbox
+8:44
+mode using paper money. So then test.
+8:46
+Okay, that's a good idea. Create guilds
+8:48
+and syndicates where players pull
+8:50
+computational power. Okay, that's pretty
+8:52
+cool. Uh, add a visual boss battles
+8:55
+representing high volatility market
+8:57
+events, earning calls, election results.
+9:00
+All right, not too bad. So, let's check
+9:02
+out our agents customization screen. So,
+9:06
+here we have arbitrage logic, high
+9:08
+frequency CPU, risk dampener, prediction
+9:12
+engine, quantum trading, market
+9:14
+analysis, and we get this drone model
+9:17
+and this hash rate, greed, and speed.
+9:20
+Okay, that was pretty cool. I'm going to
+9:22
+download this one. This was awesome. And
+9:24
+here we kind of see the network. So this
+9:26
+is the an isometric world map
+9:29
+representing different financial
+9:30
+markets. We have the poly market,
+9:32
+crypto, commodities, derivatives, forex,
+9:35
+forex, and we going to have some Yeah,
+9:37
+maybe the players can move around. We
+9:39
+have uh what is this? A visual
+9:42
+representation of agent executing a
+9:44
+trade.
+9:46
+Okay. And here kind of is the logo for
+9:49
+the game. net yield. All right, pretty
+9:52
+cool. Yeah, I think this turned out very
+9:54
+well. And we can kind of see from this
+9:56
+application how fast we can kind of go
+9:59
+from an ID, we get like a suggestion of
+10:02
+a uh a name. We also get some visuals,
+10:06
+you get an an AI analysis of the ID and
+10:09
+you get some suggested improvements. I
+10:12
+think this is just super cool. I I
+10:14
+really like this app. This is one of the
+10:16
+favorites we have made so far in the
+10:17
+shipment series. We can go back and
+10:19
+check this, right? So, we can see the
+10:21
+one we made before. And yeah, this is
+10:24
+working pretty good. But to be honest, I
+10:26
+don't think I need to change anything. I
+10:28
+was kind of ready to go into cloud code
+10:30
+and make some changes to this app. Uh,
+10:32
+but I just think it works. I don't think
+10:34
+I need to do anything. Maybe we could
+10:36
+have had something that could you could
+10:38
+follow up and make some changes.
+10:41
+Uh, but other than that, I think it
+10:42
+looks pretty cool. I really enjoy this
+10:44
+one, the drone unit, right? and the BIOS
+10:47
+setup utility. Uh but yeah, that was uh
+10:51
+this day's uh AI app suggestion or like
+10:56
+uh yeah, and thank you for tuning in so
+10:59
+far. Uh it's been really fun to doing
+11:01
+this daily and I'm going to keep trying
+11:02
+to do this more. So yeah, have a great
+11:06
+day and I'll see you again hopefully
+11:07
+tomorrow, if not day of day
+
