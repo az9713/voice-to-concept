@@ -39,3 +39,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Custom excludes
+.ignore/
+/issues/
+/docs/transcript.txt
+/docs/voice_to_concept_architecture.jpg
+
+# User data (persistent storage)
+/data/ideas.json
+/data/images/
